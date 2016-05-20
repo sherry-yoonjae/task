@@ -49,6 +49,7 @@ if __name__ == '__main__':
     counters = readMemInfo()
     print '--------------'
     print "total: %f" %(counters['total'])
+    print "free: %f" %(counters['free'])
     print "used: %f"  %(counters['total'] - counters['free'] - counters['buffers']-counters['cached'])
     rate = calcMemUsage(counters)
     end = time.time()
